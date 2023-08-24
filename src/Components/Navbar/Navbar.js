@@ -43,7 +43,7 @@ function Navbar() {
                     <div className='sub-menu'>
                         <div className='sub-menu-item'><p>Tree Removal</p></div>
                         <div className='sub-menu-item'><p>Tree Trimming</p></div>
-                        <div className='sub-menu-item'><p>Lawn mowing</p></div>
+                        <div className='sub-menu-item'><p>Landscaping</p></div>
                     </div>
                 </div>
                 <p>About Us</p>
@@ -63,7 +63,7 @@ function Navbar() {
                     <div className={`openmenu-sub ${subMenuOpen ? "openmenu2" : ""}`} >
                         <div className='sub-menu-item'><p>Tree Removal</p></div>
                         <div className='sub-menu-item'><p>Tree Trimming</p></div>
-                        <div className='sub-menu-item'><p>Lawn mowing</p></div>
+                        <div className='sub-menu-item'><p>Landscaping</p></div>
                     </div>
                 </div>
                 <p>About Us</p>

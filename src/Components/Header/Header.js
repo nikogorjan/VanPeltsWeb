@@ -4,9 +4,14 @@ import MyVideo from '../../Resources/Videos/animation.mp4';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Axe from '../../Resources/Images/axe.png'
+import { Link } from 'react-scroll';
 
 function Header() {
   const videoRef = useRef(null);
+
+  const getOffset = () => {
+    return window.innerWidth < 1000 ? 0 : -150;
+  };
 
   useEffect(() => {
     if (videoRef.current) {
@@ -27,6 +32,7 @@ function Header() {
       <div className='mobile-content'>
         <div className='header-hook-content'>
           <div className='hook-container'>
+            <p className='location-hook'>Dayton, OH 45403</p>
             <h1 className='hook-header'>Ensuring Your Safety Through Expert Tree Removal Services</h1>
             <p className='hook-paragraph'>Where Green Dreams Come to Life: Crafting and Caring for Your Ideal Lawn.</p>
             <div className='hook-button-container'>
@@ -59,6 +65,7 @@ function Header() {
         <div className="content-container">
           <div className='header-hook-content'>
             <div className='hook-container'>
+              <p className='location-hook'>Dayton, OH 45403</p>
               <h1 className='hook-header'>Ensuring Your Safety Through Expert Tree Removal Services</h1>
               <p className='hook-paragraph'>Where Green Dreams Come to Life: Crafting and Caring for Your Ideal Lawn.</p>
               <div className='hook-button-container'>
@@ -81,9 +88,22 @@ function Header() {
         </div>
 
       </div>
-      <div className="circle-pulse">
-        <div className="axe-container">
-          <img src={Axe} alt="Axe" className="axe-image" />
+      <div className='pulse-layout'>
+        <div className='pulse-position'>
+        <Link
+          to='bullets-main'
+          spy={true}
+          smooth={true}
+          offset={getOffset()} // Adjust this offset as needed
+          duration={500} // Adjust the duration as needed
+          className="circle-pulse"
+        >
+
+          <div className="axe-container">
+            <img src={Axe} alt="Axe" className="axe-image" />
+          </div>
+
+        </Link>
         </div>
       </div>
     </div>

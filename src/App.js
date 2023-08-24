@@ -1,13 +1,19 @@
 import './App.css';
-import Header from './Components/Header/Header';
-import Navbar from './Components/Navbar/Navbar';
+
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom"; // Import Router from react-router-dom
+import Pages from './Pages';
+import Contact from './Components/Contact/ContactPage';
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <Header/>
-    </div>
+    <Router> {/* Wrap your entire app with Router */}
+      <Routes>
+        <Route path="/" element={<Pages />} />
+        <Route path="/contact" element={<Contact/>} />
+
+      </Routes>
+    </Router>
+   
   );
 }
 
