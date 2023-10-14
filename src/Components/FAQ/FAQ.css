@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+  }
+
+
+.faq-layout{
+    width: 32%;
+}
+
+.faq-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 8%;
+  }
+  
+  .faq-layout {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .faq-item {
+    border-top: 1px solid rgba(56, 75, 68, 0.2);
+    padding: 30px;
+    padding-bottom: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .faq-item:hover{
+    background-color: rgba(56, 75, 68, 0.2); /* Adjust the color and opacity as needed */
+  }
+  
+  .faq-item.expanded {
+   
+  }
+  
+  .faq-question {
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1rem, 0.9667rem + 0.1778vw, 1.25rem);
+    margin-bottom: 30px;
+  }
+  
+  .faq-answer {
+    
+   
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+    text-align: justify;
+  }
+
+  
+@media (max-width: 1600px) {
+    .faq-layout{
+        width:48%;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .faq-main {
+        padding-top: 16%;
+    }
+}
+
+@media (max-width: 500px) {
+    .faq-layout{
+        width:80%;
+    }
+
+    .faq-main {
+        padding-top: 32%;
+        padding-bottom: 16%;
+    }
+    
+}

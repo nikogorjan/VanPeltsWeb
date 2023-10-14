@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+  }
+  .scale-in .landscape-layout {
+    transform: scale(1);
+    transition: transform 1s ease-in-out;
+}
+
+.scale-out .landscape-layout {
+    transform: scale(1.2);
+    transition: transform 1s ease-in-out;
+}
+
+
+.value-prop-main{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 125px;
+    padding-bottom: 10%;
+}
+
+.value-prop-main-layout{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.landscape-layout{
+    width: 100%;
+    
+
+}
+
+.landscape-container {
+    position: relative;
+  }
+
+.sliding-div {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Initially hidden */
+    animation: slideIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards,
+               fadeIn 0.5s ease-in-out forwards; /* Opacity fade-in animation */
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+               
+  }
+
+  .message{
+    color: white;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.625rem, 0.4417rem + 0.9778vw, 2rem);
+margin: 10%;
+transform: translateY(-30px);
+  }
+
+  .image-resizer{
+    overflow: hidden;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      right: -100%;
+      transform: scale(1);
+    }
+    
+    100% {
+      right: 0;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for sliding out and fading out */
+  .sliding-div.fade-out {
+    animation: slideOut 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards,
+               fadeOut 0.5s ease-in-out forwards; /* Opacity fade-out animation */
+  }
+  
+  @keyframes slideOut {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -100%;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Rest of the styles... */
+
+
+.value-prop-main-layout {
+    position: relative;
+}
+
+/* Adjust other styles as needed */
+
+.pulse-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(56, 75, 68); /* Adjust the color and opacity as needed */
+    animation: pulse 3s ease-in-out infinite;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NunitoSans-Bold';
+font-size: 12px;
+text-align: center;
+color: white;
+
+  }
+
+  .pulse-circle:hover{
+    color: rgb(235, 225, 196);
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateX(-50%) scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.5;
+    }
+  }
+
+  .value-prop2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    color: rgb(235, 225, 196);
+    font-family: 'NunitoSans-Bold';
+    width: 30%;
+    margin-top: 5%;
+  }
+
+  .value-prop2-paragraph{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+    width: 50%;
+  }
+
+  .value-prop2-button{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'NunitoSans-Light';
+    width: 192px;
+    height: 50px;
+    border-radius: 50px;
+    border: 0px;
+    background-color: rgb(235, 225, 196);
+    color: white;
+    font-family: 'NunitoSans-Light';
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .value-prop2-button:hover{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(45, 68, 75, 0.3);
+    transform: translateY(-10px);
+  }
+
+ 
+
+
+
+@media (max-width: 1000px) {
+    .value-prop-main-layout{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .value-prop-main{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 0px;
+        margin-bottom: 15%;
+    }
+
+    .pulse-circle {
+        
+        width: 64px;
+        height: 64px;
+        font-size: 10px;
+    }
+
+    .value-prop2{
+        width: 90%;
+    }
+    .value-prop2-paragraph{
+        width: 90%;
+        margin-top: 2%;
+
+    }
+    
+}

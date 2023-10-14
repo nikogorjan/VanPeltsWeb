@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+  }
+
+.ContactLandingPage-header{
+    text-align: center;
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    font-family: 'NunitoSans-Bold';
+    
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 32px;
+}
+
+.ContactLandingPage-form-main{
+   padding-top: 7%;
+    background-color: white;
+    width: 100%;
+}
+

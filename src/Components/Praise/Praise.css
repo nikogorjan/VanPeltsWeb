@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+  }
+
+  .praise-main{
+    background-color: white;
+  }
+
+.praise-layout{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    color: black;
+    font-family: 'NunitoSans-Bold';
+    padding-top: 5%;
+    
+}
+
+.praise-row{
+    display: flex;
+   justify-content: space-between;
+}
+
+.praise-praise{
+    border: 1px solid rgba(56, 75, 68, 0.2);
+    border-radius: 10px;
+    width: 33.33%;
+    margin: 30px;
+    padding: 30px;
+    min-height: 420px;
+}
+
+
+.praise-paragraph{
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+    text-align: justify;
+}
+
+.praise-praise {
+    position: relative;
+  }
+  
+  .customer-data {
+    position: absolute;
+    bottom: 10%;
+    
+  }
+
+  .customer-data{
+  }
+
+  .customer-row{
+    display: flex;
+    align-items: center;
+  }
+
+  .customer-name{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+    margin-left: 10px;
+    transform: translateY(3px);
+  }
+
+  .customer-location{
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+    margin-left: 10px;
+    transform: translateY(3px);
+
+  }
+
+
+  .customer-service{
+    font-family: 'NunitoSans-Bold';
+color: rgb(56, 75, 68);
+font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+text-align: left;
+width: 100%;
+  }
+
+  .praise-header{
+    margin-bottom: 32px;
+  }
+
+  .customer-margin{
+    margin-top: 3%;
+  }
+
+  .customer-rating{
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+margin-left: 10px;
+transform: translateY(3px);
+
+  }
+
+  @media (max-width: 1430px) {
+    .customer-service{
+        
+    width: 90%;
+      }
+    
+  }
+
+@media (max-width: 1200px) {
+    .praise-layout{
+        width: 90%;
+        padding-top: 15%;
+    }
+
+    .praise-row{
+        flex-direction: column;
+    }
+
+    .praise-praise{
+        width: auto;
+        margin: 10px;
+    }
+
+    .praise-praise{
+        min-height: 290px;
+    }
+
+    .customer-margin{
+        margin-top: 10%;
+    }
+
+    .customer-service{
+        
+        width: 100%;
+          }
+        
+}
+
+@media (max-width: 1200px) {
+
+    .customer-service{
+        
+        width: 90%;
+          }
+}

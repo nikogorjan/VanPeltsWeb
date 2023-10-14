@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.footer-img-main{
+    width: 100%;
+}
+
+.footer-info{
+}
+
+.footer-logo{
+}
+
+.footer-margin-top{
+    padding-top: 10%;
+    background-color: white;
+}
+
+.footer-image{
+    width: 100%;
+}
+
+.real-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(56, 75, 68, 1);
+    transform: translateY(-3px);
+}
+
+.footer-info{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    display: flex;
+}
+
+.services-footer-header{
+    font-family: 'NunitoSans-Bold';
+    font-size: 16px;
+    color: rgb(235, 225, 196);
+}
+
+.services-footer-service{
+    font-family: 'NunitoSans-Light';
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.services-footer-service:hover{
+    color: rgb(235, 225, 196);
+
+}
+
+.contact-fotter-info{
+    margin-left: 150px;
+}
+
+.socials-row{
+    display: flex;
+}
+
+.facebook-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.linkedin-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.twitter-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.tiktok-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.footer-logo-image{
+    display: flex;
+    width: 270px;
+    height: 270px;
+}
+
+@media (max-width: 1200px) {
+    .real-footer{
+        flex-direction: column;
+    }
+
+    .footer-info{
+        flex-direction: column;
+        padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .contact-fotter-info{
+        margin-left: 0px;
+    }
+
+    .footer-logo-image{
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+
+    .services-fotter-info{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-fotter-info{
+        margin-bottom: 20px;
+    }
+}

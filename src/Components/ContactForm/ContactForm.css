@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.contact-form-main {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container {
+    padding: 20px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-box {
+
+    border: none;
+    outline: none;
+    padding: 20px;
+    border: 1px solid rgba(56, 75, 68, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    font-family: 'NunitoSans-Light';
+    height: 32px;
+}
+
+.input-box:focus {
+    border-color: rgba(56, 75, 68, 0.6);
+}
+
+.hint {
+    font-size: 12px;
+    color: rgba(56, 75, 68, 0.2);
+}
+
+.textarea-layout {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textarea-container {
+
+    width: 100%;
+    box-sizing: border-box;
+    /* Include padding within width calculation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-box,
+.textarea-box {
+    border: none;
+    outline: none;
+    border: 1px solid rgba(56, 75, 68, 0.2);
+    border-radius: 4px;
+    font-family: 'NunitoSans-Light';
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+.textarea-box {
+    margin-top: 20px;
+
+    height: 320px;
+    padding: 20px;
+    width: calc(100% - 80px);
+    /* Subtract 40px from 100% width */
+
+}
+
+
+.input-box:focus,
+.textarea-box:focus {
+    border-color: rgba(56, 75, 68, 0.6);
+}
+
+.contact-button-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .input-container {
+        padding: 0px;
+        padding-top: 20px;
+
+    }
+
+    .textarea-box{
+        margin-top: 20px;
+        height: 320px;
+        padding: 20px;
+        width: calc(100% - 40px); /* Subtract 40px from 100% width */
+    
+      }
+}
