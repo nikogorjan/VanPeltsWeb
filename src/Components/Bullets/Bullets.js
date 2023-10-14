@@ -1,22 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Bullets.css';
 import TreeIcon from '../../Resources/Images/tree-icon.png';
 import GrassIcon from '../../Resources/Images/grass.png';
 import ScheduleIcon from '../../Resources/Images/schedule.png';
-import TreeClimber from '../../Resources/Images/climber2.png';
+import TreeClimber from '../../Resources/Images/climber3.png';
 
 function Bullets({ bulletsRef }) {
     const [scrolled, setScrolled] = useState(false);
-
-    
+    const circleRef = useRef(null);
+    const circleRef2 = useRef(null);
+    const circleRef3 = useRef(null);
+     
+    const [isAnimationTriggered, setAnimationTriggered] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const sectionTop = document.querySelector('.climber-bullet').getBoundingClientRect().top;
             const viewportHeight = window.innerHeight;
             if (sectionTop <= viewportHeight * 0.8) {
+                setAnimationTriggered(true);
                 setScrolled(true);
             } else {
+                setAnimationTriggered(false);
                 setScrolled(false);
             }
         };
@@ -26,6 +31,66 @@ function Bullets({ bulletsRef }) {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    useEffect(() => {
+        if (isAnimationTriggered) {
+            let start = 0;
+            const end = 365;
+            const duration = 160; // 5 seconds
+            const increment = (end - start) / duration;
+            let current = start;
+
+            const updateNumber = () => {
+                if (current <= end) {
+                    circleRef.current.textContent = Math.round(current);
+                    current += increment;
+                    requestAnimationFrame(updateNumber);
+                }
+            };
+
+            requestAnimationFrame(updateNumber);
+        }
+    }, [isAnimationTriggered]);
+
+    useEffect(() => {
+        if (isAnimationTriggered) {
+            let start = 0;
+            const end = 7;
+            const duration = 160; // 5 seconds
+            const increment = (end - start) / duration;
+            let current = start;
+
+            const updateNumber = () => {
+                if (current <= end) {
+                    circleRef2.current.textContent = Math.round(current);
+                    current += increment;
+                    requestAnimationFrame(updateNumber);
+                }
+            };
+
+            requestAnimationFrame(updateNumber);
+        }
+    }, [isAnimationTriggered]);
+
+    useEffect(() => {
+        if (isAnimationTriggered) {
+            let start = 0;
+            const end = 100;
+            const duration = 160; // 5 seconds
+            const increment = (end - start) / duration;
+            let current = start;
+
+            const updateNumber = () => {
+                if (current <= end) {
+                    circleRef3.current.textContent = Math.round(current);
+                    current += increment;
+                    requestAnimationFrame(updateNumber);
+                }
+            };
+
+            requestAnimationFrame(updateNumber);
+        }
+    }, [isAnimationTriggered]);
 
     return (
         <div>
@@ -70,7 +135,7 @@ function Bullets({ bulletsRef }) {
             <div className='climber-bullet'>
                 <div className='climber-layout'>
                     <div className={`climber-image ${scrolled ? 'animate' : ''}`}>
-                        <img className='climbersimg' src={TreeClimber} alt='Climber Img' />
+                        <img className='climbersimg' src={TreeClimber} alt='Climber Img' /> 
                     </div>
                     <div className={`climber-proposition ${scrolled ? 'animate' : ''}`}>
                         <h1 className='climber-proposition-header'>Experienced Climbers: Scaling Heights with Confidence</h1>
@@ -87,6 +152,24 @@ function Bullets({ bulletsRef }) {
                             <div className='proposition-circle'></div>
                             <div className='circle-paragraph'>Comprehensive Solutions</div>
                         </div>
+
+                        <div className='numbers-row'>
+                            <div className='numbers-item margin-item'>
+                                <div className='numbers-div'><div className='number' ref={circleRef}>0</div><div className='number'>+</div></div>
+                                <div className='numbers-type'>FINISHED PROJECTS</div>
+                            </div>
+
+                            <div className='numbers-item margin-item'>
+                            <div className='numbers-div'><div className='number' ref={circleRef2}>0</div><div className='number'>+</div></div>
+                                <div className='numbers-type'>YEARS OF EXPERIENCE</div>
+                            </div>
+
+                            <div className='numbers-item'>
+                            <div className='numbers-div'><div className='number' ref={circleRef3}>0</div><div className='number'>%</div></div>
+                                <div className='numbers-type'>COMPREHENSIVE SOLUTIONS</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

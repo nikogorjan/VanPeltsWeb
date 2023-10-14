@@ -27,10 +27,11 @@
     width: 100%;
     overflow: hidden;
     margin-top: 125px;
+    padding-bottom: 10%;
 }
 
 .value-prop-main-layout{
-    width: 75%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -64,7 +65,7 @@
   .message{
     color: white;
     font-family: 'NunitoSans-Bold';
-    font-size: clamp(0.625rem, 0.3083rem + 1.6889vw, 3rem);
+    font-size: clamp(0.625rem, 0.4417rem + 0.9778vw, 2rem);
 margin: 10%;
 transform: translateY(-30px);
   }
@@ -228,6 +229,7 @@ color: white;
         width: 100%;
         overflow: hidden;
         margin-top: 0px;
+        margin-bottom: 15%;
     }
 
     .pulse-circle {

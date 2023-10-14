@@ -40,7 +40,7 @@ function ValueProp() {
                     {showSlidingDiv && (
                         <div className={`sliding-div ${fadeState ? 'fade-out' : 'fade-in'}`}>
                             <p className='message'>
-                                Embrace the beauty of nature. Your dream outdoor space awaits!
+                                Embrace the beauty of nature. Your dream outdoor space awaits! 
                             </p>
                         </div>
                     )}

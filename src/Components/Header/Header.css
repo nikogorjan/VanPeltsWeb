@@ -78,20 +78,17 @@
 
 .location-hook{
   font-family: 'NunitoSans-Light';
-  animation: slideInFromLeft 1s ease-in-out; /* Adjust duration and easing as needed */
   font-size: clamp(0.5rem, 0.4667rem + 0.1778vw, 0.75rem);}
 
 .hook-header {
   font-family: 'NunitoSans-Bold';
   font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
-  animation: slideInFromLeft 1s ease-in-out; /* Adjust duration and easing as needed */
 
 }
 
 .hook-paragraph {
   font-family: 'NunitoSans-Light';
   font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
-  animation: slideInFromLeft 1s ease-in-out; /* Adjust duration and easing as needed */
 
 }
 
@@ -99,7 +96,6 @@
   display: flex;
   flex-direction: row;
   margin-top: 15%;
-  animation: slideInFromLeft 1s ease-in-out; /* Adjust duration and easing as needed */
 
 }
 

@@ -1,13 +1,15 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import MyVideo from '../../Resources/Videos/animation.mp4';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Axe from '../../Resources/Images/axe.png'
+import Axe from '../../Resources/Images/axe.png';
 import { Link } from 'react-scroll';
 
 function Header() {
   const videoRef = useRef(null);
+  const [videoEnded, setVideoEnded] = useState(false);
+  const [fadeState, setFadeState] = useState(false);
 
   const getOffset = () => {
     return window.innerWidth < 1000 ? 0 : -150;
@@ -15,17 +17,29 @@ function Header() {
 
   useEffect(() => {
     if (videoRef.current) {
-      const timeout = setTimeout(() => {
-        if (videoRef.current.paused) {
-          videoRef.current.play();
-        } else {
+      videoRef.current.addEventListener('timeupdate', () => {
+        if (videoRef.current.currentTime >= videoRef.current.duration - 0.5) {
           videoRef.current.pause();
+          setVideoEnded(true);
         }
-      }, 12960); // 12.9 seconds in milliseconds
-
-      return () => clearTimeout(timeout);
+      });
     }
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('timeupdate', () => {
+          if (videoRef.current.currentTime >= videoRef.current.duration - 0.5) {
+            videoRef.current.pause();
+            setVideoEnded(true);
+          }
+        });
+      }
+    };
   }, []);
+
+  const toggleFadeState = () => {
+    setFadeState((prevFadeState) => !prevFadeState);
+  };
 
   return (
     <div className='header-main'>
@@ -50,14 +64,12 @@ function Header() {
             </div>
           </div>
         </div>
-
       </div>
       <div className="header-container">
         <video
           ref={videoRef}
           className="header-video"
           autoPlay
-          loop
           muted
         >
           <source src={MyVideo} type="video/mp4" />
@@ -84,30 +96,27 @@ function Header() {
             </div>
           </div>
           <div className='header-blank-content'>
+            {/* Your existing code for blank content */}
           </div>
         </div>
-
       </div>
       <div className='pulse-layout'>
         <div className='pulse-position'>
-        <Link
-          to='bullets-main'
-          spy={true}
-          smooth={true}
-          offset={getOffset()} // Adjust this offset as needed
-          duration={500} // Adjust the duration as needed
-          className="circle-pulse"
-        >
-
-          <div className="axe-container">
-            <img src={Axe} alt="Axe" className="axe-image" />
-          </div>
-
-        </Link>
+          <Link
+            to='bullets-main'
+            spy={true}
+            smooth={true}
+            offset={getOffset()}
+            duration={500}
+            className="circle-pulse"
+          >
+            <div className="axe-container">
+              <img src={Axe} alt="Axe" className="axe-image" />
+            </div>
+          </Link>
         </div>
       </div>
     </div>
-
   );
 }
 
