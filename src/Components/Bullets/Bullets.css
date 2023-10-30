@@ -245,7 +245,7 @@
         margin: 0 auto;
         padding: 0px;
         margin-bottom: 50px;
-        width: 80%;
+        width: 85%;
     }
 
 
@@ -260,7 +260,7 @@
     .climber-layout {
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
     }
 

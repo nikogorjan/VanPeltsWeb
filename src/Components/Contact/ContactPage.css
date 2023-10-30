@@ -1,7 +1,479 @@
+@font-face {
+  font-family: 'NunitoSans-Regular';
+  src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'NunitoSans-Bold';
+  src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'NunitoSans-Light';
+  src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+
 .contact-page-main{
     width: 100%;
-    height: 100vh;
     background-color: white;
     overflow: hidden;
 }
 
+.the-slider-out {
+    z-index: 99999;
+    position: fixed;
+    right: 0; /* Initially overflowing the page */
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(6, 25, 18); /* Add your desired background color */
+    transition: right 1s; /* Use a transition for smooth animation */
+  }
+
+  .slider-visible {
+    right: -100%; /* Slide the slider to the right */
+    background-color: rgb(6, 25, 18); /* Add your desired background color */
+
+  }
+
+  .Contact-headers-container {
+    text-align: left; /* Center text horizontally within the container */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Contact-main-header{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    
+  }
+
+  .Contact-main-header2{
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-main-paragraph{
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+    margin: 0;
+  }
+
+  .contact-hero-layout{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 75px;
+  }
+
+  .contact-hero-left{
+    width: 50%;
+  }
+
+  .contact-hero-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vector-img{
+    width: 100%;
+    margin-top: 75px;
+  }
+
+  .contact-page-button{
+    margin-left: 0;
+    align-self: flex-start;
+    margin-top: 50px;
+  }
+
+  .phone-mail-layout{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+  .phone-mail-container{
+    width: 50%;
+    margin: 50px;
+    background-color: rgba(76, 95, 88,0.33);
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+  }
+
+  .phone-icon{
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-map-location{
+    width: 100%;
+    height: 640px;
+    margin: 0 auto;
+  }
+
+  .contact-contact-form{
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  .contact-services{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact-work{
+    width: 20%;
+    position: relative;
+    transition: background-color 0.3s; /* Add a transition for smooth color change */
+    cursor: pointer;
+    height: 60vh;
+  }
+
+  .work-img{
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .works-overflow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(56, 75, 68, 0.0);
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s; /* Add a transition for smooth color change */
+    overflow: hidden;
+  }
+
+  .contact-work:hover .works-overflow {
+    background-color: rgba(56, 75, 68, 0.8); /* Change the background color on hover */
+  }
+
+  .works-overflow-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30%;
+  }
+
+  .works-overflow-header{
+    color: white;
+    display: none;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1rem, -0.2821rem + 2.0513vw, 3rem);
+  }
+
+  .works-overflow-paragraph{
+    color: white;
+    display: none;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(0.875rem, 0.6346rem + 0.3846vw, 1.25rem);
+  }
+
+  .contact-work:hover .works-overflow-header{
+    display: block;
+  }
+  .contact-work:hover .works-overflow-paragraph{
+    display: block;
+  }
+
+  .contact-work:hover .arrowright{
+    display: block;
+  }
+
+  a {
+    display: inline-block;
+    border-radius: 50%;
+  }
+
+  .arrowright{
+    display: inline-block;
+    vertical-align: middle;
+    display: flex;
+    text-align: center;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .right {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 1.5em;
+  }
+  
+  .right:after {
+    content: '';
+    display: inline-block;
+    margin-top: 1.3em;
+    margin-left: -0.6em;
+    width: 1.2em;
+    height: 1.2em;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .contact-information{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .the-information{
+    display: flex;
+    margin-right: 64px;
+  }
+
+  .info-div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .info-type{
+    color: black;
+    font-family: 'NunitoSans-Bold';
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .info-information{
+    color: black;
+    font-family: 'NunitoSans-Bold';
+    font-size: 12px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .info-information:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .fa-icon-wrapper{
+    width: 32px;
+    height: 32px;
+  }
+
+  .fa-icon{
+    font-size: 32px;
+  }
+
+  .landscaping-work{
+    background-image: url('../../Resources/Images/landscape1.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Makes the background image cover the entire element */
+  }
+
+  .removal-work{
+    background-image: url('../../Resources/Images/removal1.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Makes the background image cover the entire element */
+  }
+
+  .trimming-work{
+    background-image: url('../../Resources/Images/trimming1.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Makes the background image cover the entire element */
+  }
+
+  .fence-work{
+    background-image: url('../../Resources/Images/privacy.png'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Makes the background image cover the entire element */
+  }
+
+  .removal-work2{
+    background-image: url('../../Resources/Images/ivy2.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Makes the background image cover the entire element */
+  }
+
+  .mobileyes{
+    display: none;
+  }
+
+  .zindex{
+    z-index: 99;
+  }
+
+  
+  
+  @media (max-width: 1600px) {
+    .contact-work{
+      width: 100%;
+      height: 45vh;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .contact-work{
+      width: 100%;
+      height: 40vh;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .contact-page-button{
+      align-self: center;
+    }
+    .mobileno{
+      display: none !important; 
+    }
+
+    .contact-hero-layout{
+      display: flex;
+      flex-direction: column;
+      margin-top: 75px;
+      width: 90%;
+    }
+  
+    .contact-hero-left{
+      width: 100%;
+      z-index: 0;
+
+    }
+  
+    .contact-hero-right{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-services{
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .contact-work{
+      width: 100%;
+      height: 70vh;
+    }
+
+    .works-overflow{
+      background-color: rgba(56, 75, 68, 0.8); /* Change the background color on hover */
+
+    }
+
+    .works-overflow-header{
+      color: white;
+      display: block;
+      font-family: 'NunitoSans-Bold';
+      font-size: clamp(1rem, -0.2821rem + 2.0513vw, 3rem);
+    }
+  
+    .works-overflow-paragraph{
+      color: white;
+      display: block;
+      font-family: 'NunitoSans-Bold';
+      font-size: clamp(0.875rem, 0.6346rem + 0.3846vw, 1.25rem);
+    }
+
+    .contact-map-location{
+      margin-top: 0;
+    }
+
+    .arrowright{
+      display: block;
+    }
+
+    .contact-information{
+      display: flex;
+      width: 90%;
+      flex-direction: column;
+      margin: 0 auto;
+      
+      margin-top: 80px;
+    }
+
+    .the-information{
+      align-self:center;
+      margin-bottom: 40px;
+      margin-right: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .fa-icon-wrapper{
+      align-self: center;
+      margin-bottom: 12px;
+    }
+
+    .the-information:nth-child(3){
+      margin-bottom: 0px;
+
+    }
+
+    
+    
+  }
+
+  @media (max-width: 420px) {
+    .fa-icon{
+      font-size: 32px;
+    }
+
+    .info-type{
+      color: black;
+      font-family: 'NunitoSans-Bold';
+      font-size: 16px;
+      margin: 0;
+    }
+  
+    .info-information{
+      color: black;
+      font-family: 'NunitoSans-Bold';
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .fa-icon-wrapper{
+      width: 32px;
+      height: 32px;
+    }
+
+    .vector-img{
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 1921px) {
+    .info-type{
+      color: black;
+      font-family: 'NunitoSans-Bold';
+      font-size: 20px;
+      margin: 0;
+    }
+  
+    .info-information{
+      color: black;
+      font-family: 'NunitoSans-Bold';
+      font-size: 16px;
+      margin: 0;
+    }
+  
+    .fa-icon-wrapper{
+      width: 48px;
+      height: 48px;
+    }
+  
+    .fa-icon{
+      font-size: 48px;
+    }
+  }

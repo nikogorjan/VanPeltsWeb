@@ -96,7 +96,7 @@ width: 100%;
   }
 
   .customer-margin{
-    margin-top: 3%;
+    margin-top: 32px;
   }
 
   .customer-rating{
@@ -135,7 +135,7 @@ transform: translateY(3px);
     }
 
     .customer-margin{
-        margin-top: 10%;
+        margin-top: 32px;
     }
 
     .customer-service{

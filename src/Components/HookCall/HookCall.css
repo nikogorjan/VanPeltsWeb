@@ -1,0 +1,74 @@
+.hookcall-main{
+    width: 70%;
+    display: flex;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.hookcall-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hookcall-right{
+    width: 50%;
+}
+
+.real-main{
+    width: 100%;
+    background-color: white;
+}
+
+.hookcall-header{
+    font-size: clamp(1.5rem, 1.3667rem + 0.7111vw, 2.5rem);
+    font-family: 'NunitoSans-Bold';
+
+}
+
+.hookcall-paragraph{
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+
+}
+
+.hookcallbutton{
+    margin-top: 32px;
+    align-self: flex-start;
+}
+
+.hoocall-wrapper{
+    width: 80%;
+}
+
+@media (max-width: 1000px) {
+    .hoocall-wrapper{
+        width: 100%;
+    }
+    .hookcall-main{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    .hookcall-right{
+        width: 100%;
+    }
+
+    .hookcall-left{
+        width: 100%;
+        margin-top: 75px;
+        margin-bottom: 32px;
+    }
+
+    .hookcallbutton{
+        margin-top: 32px;
+        align-self: center;
+    }
+    
+   
+}

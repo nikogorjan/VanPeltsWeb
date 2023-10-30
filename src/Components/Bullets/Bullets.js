@@ -3,7 +3,7 @@ import './Bullets.css';
 import TreeIcon from '../../Resources/Images/tree-icon.png';
 import GrassIcon from '../../Resources/Images/grass.png';
 import ScheduleIcon from '../../Resources/Images/schedule.png';
-import TreeClimber from '../../Resources/Images/climber3.png';
+import TreeClimber from '../../Resources/Images/climber4.jpg';
 
 function Bullets({ bulletsRef }) {
     const [scrolled, setScrolled] = useState(false);
@@ -35,7 +35,7 @@ function Bullets({ bulletsRef }) {
     useEffect(() => {
         if (isAnimationTriggered) {
             let start = 0;
-            const end = 365;
+            const end = 465;
             const duration = 160; // 5 seconds
             const increment = (end - start) / duration;
             let current = start;

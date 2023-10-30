@@ -26,8 +26,8 @@
 .value-prop-main{
     width: 100%;
     overflow: hidden;
-    margin-top: 125px;
-    padding-bottom: 10%;
+    padding-bottom: 75px;
+    margin-top: 75px;
 }
 
 .value-prop-main-layout{
@@ -176,7 +176,7 @@ color: white;
     color: rgb(235, 225, 196);
     font-family: 'NunitoSans-Bold';
     width: 30%;
-    margin-top: 5%;
+    margin-top: 75px;
   }
 
   .value-prop2-paragraph{
@@ -187,6 +187,7 @@ color: white;
     font-family: 'NunitoSans-Light';
     font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
     width: 50%;
+    margin-bottom: 75px;
   }
 
   .value-prop2-button{
@@ -221,7 +222,7 @@ color: white;
 
 @media (max-width: 1000px) {
     .value-prop-main-layout{
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
     }
 
@@ -229,7 +230,7 @@ color: white;
         width: 100%;
         overflow: hidden;
         margin-top: 0px;
-        margin-bottom: 15%;
+        
     }
 
     .pulse-circle {
@@ -240,11 +241,13 @@ color: white;
     }
 
     .value-prop2{
-        width: 90%;
+        width: 85%;
+        margin-top: 32px;
     }
     .value-prop2-paragraph{
-        width: 90%;
+        width: 85%;
         margin-top: 2%;
+        margin-bottom: 0px;
 
     }
     

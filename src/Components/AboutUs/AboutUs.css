@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'NunitoSans-Light';
+    src: url('../../Resources/Fonts/NunitoSans_10pt-Light.ttf') format('woff2');
+}
+
+.aboutus-main{
+
+}
+
+.about-content {
+    width: 100%;
+    background-color: white;
+    margin-top: 75px;
+    overflow: hidden;
+    
+}
+
+.about-left-right {
+    display: flex;
+}
+
+.about-left-right2 {
+    display: flex;
+}
+
+.about-left {
+    width: 50%;
+    display: flex;
+
+}
+
+.about-right {
+    width: 50%;
+    background-image: url('../../Resources/Images/andrew.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Makes the background image cover the entire element */
+}
+
+.about-left2 {
+    width: 50%;
+    display: flex;
+
+}
+
+.about-right2 {
+    width: 50%;
+}
+
+.andrew-img {
+    width: 100%;
+}
+
+.about-content-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.otherwrapper{
+    padding-top: 125px;
+    padding-bottom: 125px;
+    width: 40%;
+}
+
+.about-header {
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+}
+
+.about-paragraph {
+
+    font-family: 'NunitoSans-Light';
+    font-size: clamp(0.75rem, 0.6833rem + 0.3556vw, 1.25rem);
+}
+
+.about-services{
+    background-color: white;
+    
+
+}
+
+.about-services-header{
+    text-align: center;
+    font-family: 'NunitoSans-Bold';
+    font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 4rem);
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.first-wrapper{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+
+}
+
+.first-wrapper2{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+
+}
+
+.wrapper-slide{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.img-wrapper{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+
+
+}
+
+.img-slide{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .about-services{
+        background-color: white;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    
+    }
+    .about-left-right {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-left-right2 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .about-left{
+        width: 100%;
+    }
+
+    .about-right{
+        width: 100%;
+    }
+
+    .about-left2{
+        width: 100%;
+    }
+
+    .about-right2{
+        width: 100%;
+    }
+
+    .about-content-wrapper {
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .otherwrapper{
+        padding-top: 0px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .otherwrapper{
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}
