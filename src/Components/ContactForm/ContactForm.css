@@ -19,7 +19,7 @@
 
 .form-row {
     display: flex;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 
     align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .textarea-layout {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -136,4 +136,13 @@
         width: calc(100% - 40px); /* Subtract 40px from 100% width */
     
       }
+
+      .form-row {
+      
+    width: 90%;}
+
+    .textarea-layout {
+        width: 90%;
+       
+    }
 }

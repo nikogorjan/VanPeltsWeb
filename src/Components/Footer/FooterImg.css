@@ -24,7 +24,6 @@
 }
 
 .footer-margin-top{
-    padding-top: 10%;
     background-color: white;
 }
 
@@ -98,8 +97,53 @@
 
 .footer-logo-image{
     display: flex;
-    width: 270px;
-    height: 270px;
+    width: 400px;
+   
+}
+
+.the-maker{
+    cursor: pointer;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.the-maker-header{
+    color: white;
+}
+
+
+
+.the-maker-logo{
+    width: 75px;
+    height: 75px;
+    
+}
+
+@keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.copyrights{
+    color: white;
+    font-family: 'NunitoSans-Light';
+
+}
+
+.makers-web{
+    color: white;
+    font-family: 'NunitoSans-Light';
+    color: rgb(255, 241, 165);
 }
 
 @media (max-width: 1200px) {
@@ -134,5 +178,12 @@
 
     .contact-fotter-info{
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .the-maker{
+        flex-direction: column;
+        text-align: center;
     }
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ValueProp.css';
-import Landscape from '../../Resources/Images/landscape2.png';
+import Landscape from '../../Resources/Images/landscape8.png';
 
 function ValueProp() {
     const [showSlidingDiv, setShowSlidingDiv] = useState(false);
@@ -32,6 +32,7 @@ function ValueProp() {
 
     return (
         <div className='value-prop-main'>
+            
             <div className='value-prop-main-layout'>
                 <div className='landscape-container'>
                     <div className={`image-resizer ${fadeState ? 'scale-in' : 'scale-out '}`}>
@@ -52,8 +53,12 @@ function ValueProp() {
             <div className='value-prop2'>Preserving Aesthetic Harmony: Nurturing Your Outdoor Sanctuary</div>
             <div className='value-prop2-paragraph'>
                 Through thoughtful design, sustainable practices, and expert care, we transform your outdoor space into a living masterpiece that captures the beauty of nature while harmonizing with your vision.
-                <div className='value-prop2-button'>Get a Free Estimate</div>
             </div>
+           {/* <div className='value-prop2'>Preserving Aesthetic Harmony: Nurturing Your Outdoor Sanctuary</div>
+            <div className='value-prop2-paragraph'>
+                Through thoughtful design, sustainable practices, and expert care, we transform your outdoor space into a living masterpiece that captures the beauty of nature while harmonizing with your vision.
+                <div className='value-prop2-button'>Get a Free Estimate</div>
+                    </div>*/}
         </div>
     );
 }

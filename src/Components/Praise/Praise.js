@@ -58,7 +58,9 @@ function Praise() {
                         </div>
                 </div>
 
-                <button className='hook-button customer-margin'>Read More</button>
+                <button className='hook-button customer-margin' onClick={() => {
+    window.open('https://www.homeadvisor.com/rated.VanpeltsTreeService.68135705.html', '_blank');
+  }}>Read More</button>
             </div>
         </div>
     );

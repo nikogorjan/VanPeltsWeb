@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding-top: 8%;
+    padding-top: 100px;
   }
   
   .faq-layout {
@@ -74,18 +74,18 @@
 
 @media (max-width: 1000px) {
     .faq-main {
-        padding-top: 16%;
+      padding-top: 75px;
+
     }
 }
 
 @media (max-width: 500px) {
     .faq-layout{
-        width:80%;
+        width:85%;
     }
 
     .faq-main {
-        padding-top: 32%;
-        padding-bottom: 16%;
+        
     }
     
 }

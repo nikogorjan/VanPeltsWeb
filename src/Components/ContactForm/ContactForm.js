@@ -47,7 +47,7 @@ function ContactForm() {
 
             // Reset the form after successful submission if needed
             setFullName("");
-            setPhoneNum("");
+            setPhoneNum(""); 
             setEmail("");
             setLocation("");
             setMessage("");
