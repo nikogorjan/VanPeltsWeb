@@ -38,6 +38,13 @@ function Header(props) {
     };
   }, []);
 
+  {/*useEffect(()=>{
+    setTimeout(()=>{
+      console.log('now pause the video');
+      videoRef.current.pause();
+    },13000);
+  },[]);*/}
+
   const toggleFadeState = () => {
     setFadeState((prevFadeState) => !prevFadeState);
   };
@@ -91,25 +98,7 @@ useEffect(() => {
   props.onVideoLoadChange(videoLoaded);
 }, [videoLoaded]);
 
-{/*useEffect(() => {
-  if (videoRef.current) {
-    videoRef.current.addEventListener('loadeddata', () => {
-      // Video has loaded
-      console.log('Video loaded2');
-      setVideoLoaded(true); // Set videoLoaded to true when the video is loaded
 
-      // Forward the videoLoaded state to the parent component
-      props.onVideoLoadChange(videoLoaded);
-    });
-  }
-
-  // Clean up the event listener
-  return () => {
-    if (videoRef.current) {
-      videoRef.current.removeEventListener('loadeddata', () => {});
-    }
-  };
-}, [videoLoaded]);*/}
 
   return (
     <div className='header-main'>
@@ -142,7 +131,7 @@ useEffect(() => {
           className="header-video"
           autoPlay
           muted
-
+          playsInline
         >
           <source src={MyVideo} type="video/mp4" />
         </video>

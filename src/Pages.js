@@ -12,6 +12,7 @@ import lanscaping from './Resources/Images/landscape1.jpg'
 import trimming from './Resources/Images/trimming1.jpg'
 import removal from './Resources/Images/removal1.jpg'
 import HookCall from './Components/HookCall/HookCall';
+import nobglogo from './Resources/Images/nobglogo.png'
 
 const Pages = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -80,24 +81,19 @@ const Pages = () => {
         setVideoLoaded(isLoaded);
       };
 
-      {/*useEffect(() => {
-        console.log('the video did load '+videoLoaded); // This will log the updated value of videoLoaded
-        setTimeout(() => {
-            
-            etSliderVisible(true);
-        setVideoVisible(true);
-        setSliderVisible(true);
-
-    }, 500); // 1000 milliseconds = 1 second
-        
-      }, [videoLoaded]);*/}
+     
 
       useEffect(() => {
         // callback function to call when event triggers
         const onPageLoad = () => {
           console.log('page loaded');
-          setVideoVisible(true);
+          
+            
+          //////////////////////////////////////////////////// 
+        setVideoVisible(true);
         setSliderVisible(true);
+
+    
           // do something else
         };
     
@@ -194,8 +190,12 @@ const Pages = () => {
             </div>
 
             <div className={`loading-screen ${videoVisible ? 'close-loading' : ''}`}>
-                <div className="loading-circle"></div>
-                <p className='loading-paragraph'>Loading</p>
+                {/*<div className="loading-circle"></div>
+                <p className='loading-paragraph'>Loading</p>*/}
+                <div className='pulsing-logo'>
+                <img src={nobglogo} alt="No background logo" className='nobglogoclass pulse3'/>
+                <p className='loading-paragraph'>Loading<span className='dot1'>.</span ><span className='dot1'>.</span><span className='dot1'>.</span></p>
+                </div>
             </div>
         </div>
     );
