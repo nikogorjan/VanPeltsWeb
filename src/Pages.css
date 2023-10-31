@@ -43,13 +43,71 @@
  .loading-paragraph{
     color: rgb(235, 225, 196);
     font-family: 'NunitoSans-Light';
-    margin-top: 60px;
+    margin-top: 20px;
+    align-self: center;
+    font-size: 20px;
 
  }
 
  .close-loading{
     display: none;
  }
+
+ .pulsing-logo{
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+ }
+
+ .nobglogoclass{
+  width: 100%;
+ }
+
+ @keyframes pulse3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse3 {
+  animation: pulse3 2s infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 60%, 100% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+.dot1{
+  text-align: center;
+  animation: dot-pulse 2s infinite;
+  animation-delay: 0s; /* Delay the start of the animation for the second dot */
+
+}
+
+.dot2 {
+  text-align: center;
+  animation: dot-pulse 2s infinite;
+  animation-delay: 0.5s; /* Delay the start of the animation for the second dot */
+}
+
+.dot3 {
+  text-align: center;
+  animation: dot-pulse 2s infinite;
+  animation-delay: 1s; /* Delay the start of the animation for the third dot */
+}
+
+
 
 @media (max-width: 1000px) {
     .color-services{

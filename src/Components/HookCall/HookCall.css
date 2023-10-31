@@ -41,6 +41,8 @@
 
 .hoocall-wrapper{
     width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 1000px) {
@@ -67,7 +69,8 @@
 
     .hookcallbutton{
         margin-top: 32px;
-        align-self: center;
+        align-self: center ;
+        
     }
     
    

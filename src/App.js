@@ -14,7 +14,7 @@ function App() {
   return (
     <Router> {/* Wrap your entire app with Router */}
       <Routes>
-        <Route path="/" element={<Pages />} />
+        <Route path="/" element={<P ages />} />
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/About" element={<AboutUs/>} />
         <Route path="/Tree-Removal" element={<TreeRemoval/>} />
