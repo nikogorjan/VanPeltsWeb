@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import removal from '../../Resources/Images/landscape1.jpg'
 import removal2 from '../../Resources/Images/landscape5.jpg'
 import FooterImg from '../Footer/FooterImg';
+import { Helmet } from 'react-helmet-async';
 
 const Landscaping = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -85,6 +86,11 @@ const Landscaping = () => {
     
   return (
     <div className='tree-removal-main'>
+        <Helmet>
+                <title>Landscaping</title>
+                <link rel='canonical' href='/Landscaping'></link>
+                <meta name='description' content="Transform your outdoor space into a picturesque paradise with Van Pelt's Tree & Lawn Care. Our landscaping services breathe life into your dreams."></meta>
+            </Helmet>
             <Navbar />
 
             <div className='service-layout'>

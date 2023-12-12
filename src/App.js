@@ -9,12 +9,14 @@ import TreeTrimming from './Components/TreeTrimming/TreeTrimming';
 import Landscaping from './Components/Landscaping/Landscaping';
 import FenceBuilding from './Components/FenceBuilding/FenceBuilding';
 import OtherService from './Components/OtherService/OtherService';
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   return (
+    <HelmetProvider>
     <Router> {/* Wrap your entire app with Router */}
       <Routes>
-        <Route path="/" element={<P ages />} />
+        <Route path="/" element={<Pages />} />
         <Route path="/Contact" element={<Contact/>} />
         <Route path="/About" element={<AboutUs/>} />
         <Route path="/Tree-Removal" element={<TreeRemoval/>} />
@@ -25,7 +27,7 @@ function App() {
 
       </Routes>
     </Router>
-   
+    </HelmetProvider>
   );
 }
 

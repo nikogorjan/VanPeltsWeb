@@ -13,6 +13,7 @@ import trimming from './Resources/Images/trimming1.jpg'
 import removal from './Resources/Images/removal1.jpg'
 import HookCall from './Components/HookCall/HookCall';
 import nobglogo from './Resources/Images/nobglogo.png'
+import { Helmet } from 'react-helmet-async';
 
 const Pages = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -109,6 +110,11 @@ const Pages = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Van Pelt's Tree & Lawn Care</title>
+                <link rel='canonical' href='/'></link>
+                <meta name='description' content="Van Pelt's Tree & Lawn Care: Your Trusted Partner for Expert Tree and Lawn Services in Dayton Ohio. Bringing Beauty and Health to Your Outdoors."></meta>
+            </Helmet>
             <Navbar />
             <Header bulletsRef={bulletsRef} onVideoLoadChange={handleVideoLoadChange} />
             <Bullets bulletsRef={bulletsRef} />

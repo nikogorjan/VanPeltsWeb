@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import removal from '../../Resources/Images/trimming1.jpg'
 import removal2 from '../../Resources/Images/trimming2.jpg'
 import FooterImg from '../Footer/FooterImg';
+import { Helmet } from 'react-helmet-async';
 
 const TreeTrimming = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -85,6 +86,11 @@ const TreeTrimming = () => {
     
   return (
     <div className='tree-removal-main'>
+        <Helmet>
+                <title>Tree Trimming</title>
+                <link rel='canonical' href='/Tree-Trimming'></link>
+                <meta name='description' content="Elevate your landscape with precision tree trimming services from Van Pelt's Tree & Lawn Care. Enhance tree health and aesthetic appeal today."></meta>
+            </Helmet>
             <Navbar />
 
             <div className='service-layout'>
