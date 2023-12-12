@@ -40,7 +40,7 @@ function ContactForm() {
             message: message
           };
 
-          emailjs.send('service_ntc93k8', 'template_xjt4h4j', templateParams, 'qjctlMy68iSCBqueO')
+          emailjs.send('service_cq793wd', 'template_g1i8z7l', templateParams, 'Q8wpfwOXqmoGFx8Df')
           .then((response) => {
             console.log('Email sent successfully:', response.text);
             window.alert('Email sent successfully:');

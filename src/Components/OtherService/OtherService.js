@@ -6,6 +6,7 @@ import removal3 from '../../Resources/Images/suckle1.png'
 import removal4 from '../../Resources/Images/washing1.png'
 
 import FooterImg from '../Footer/FooterImg';
+import { Helmet } from 'react-helmet-async';
 
 const OtherService = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -86,6 +87,11 @@ const OtherService = () => {
     
   return (
     <div className='tree-removal-main'>
+        <Helmet>
+                <title>Other Removal Services</title>
+                <link rel='canonical' href='/Other-Services'></link>
+                <meta name='description' content="Beyond trees, we offer a range of specialized removal services. Trust Van Pelt's Tree & Lawn Care for all your removal needs."></meta>
+            </Helmet>
             <Navbar />
 
             <div className='service-layout'>

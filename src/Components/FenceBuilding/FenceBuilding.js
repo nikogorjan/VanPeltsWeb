@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import removal from '../../Resources/Images/fence1.png'
 import removal2 from '../../Resources/Images/fence3.png'
 import FooterImg from '../Footer/FooterImg';
+import { Helmet } from 'react-helmet-async';
 
 const FenceBuilding = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -84,6 +85,11 @@ const FenceBuilding = () => {
     
   return (
     <div className='tree-removal-main'>
+         <Helmet>
+                <title>Privacy Fence Building</title>
+                <link rel='canonical' href='/Privacy-Fence-Building'></link>
+                <meta name='description' content="Elevate your privacy and security with our expert privacy fence building service. Van Pelt's Tree & Lawn Care delivers quality and peace of mind."></meta>
+            </Helmet>
             <Navbar />
 
             <div className='service-layout'>

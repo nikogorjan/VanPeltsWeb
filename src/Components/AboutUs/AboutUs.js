@@ -8,6 +8,7 @@ import lanscaping from '../../Resources/Images/landscape1.jpg'
 import trimming from '../../Resources/Images/trimming1.jpg'
 import removal from '../../Resources/Images/removal1.jpg'
 import { gsap } from 'gsap'; // Import GSAP
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -89,7 +90,13 @@ const AboutUs = () => {
     };
 
     return (
+        
         <div className='aboutus-main'>
+            <Helmet>
+                <title>About Us</title>
+                <link rel='canonical' href='/About'></link>
+                <meta name='description' content="Discover Van Pelt's Tree & Lawn Care: Your Dayton, Ohio experts in tree and lawn services. Learn about our commitment to your outdoor space."></meta>
+            </Helmet>
             <Navbar />
 
             <div className='about-content'>
