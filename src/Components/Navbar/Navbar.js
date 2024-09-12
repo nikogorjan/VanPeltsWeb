@@ -125,7 +125,7 @@ function Navbar() {
                 </div>
                 <div className='navbar-links'>
                     <p onClick={goToHome}>Home</p> 
-                    <div className='services-menu'>
+                    <div className='services-menu'> 
                         <p>Services</p>
                         <div className='sub-menu'>
                             <div className='sub-menu-item' onClick={goToTreeRemoval}><p>Tree Removal</p></div>
