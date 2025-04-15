@@ -7,6 +7,7 @@ import removal4 from '../../Resources/Images/washing1.png'
 
 import FooterImg from '../Footer/FooterImg';
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../GoogleAnalytics/GoogleAnalytics';
 
 const OtherService = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -93,7 +94,7 @@ const OtherService = () => {
                 <meta name='description' content="Beyond trees, we offer a range of specialized removal services. Trust Van Pelt's Tree & Lawn Care for all your removal needs."></meta>
             </Helmet>
             <Navbar />
-
+            <GoogleAnalytics/>
             <div className='service-layout'>
                 <div className='service-layout-row'>
                     <div className='servicer-left first-wrapper'>

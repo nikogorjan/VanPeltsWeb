@@ -14,6 +14,7 @@ import removal from './Resources/Images/removal1.jpg'
 import HookCall from './Components/HookCall/HookCall';
 import nobglogo from './Resources/Images/nobglogo.png'
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from './Components/GoogleAnalytics/GoogleAnalytics';
 
 const Pages = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -122,6 +123,7 @@ const Pages = () => {
             <Praise />
             <FAQ />
             <HookCall />
+            <GoogleAnalytics/>
             {/*<ContactLandingPage />*/}
             <div className='color-services'>
                 <div className='contact-services'>

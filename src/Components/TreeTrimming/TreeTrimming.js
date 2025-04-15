@@ -5,6 +5,7 @@ import removal from '../../Resources/Images/trimming1.jpg'
 import removal2 from '../../Resources/Images/trimming2.jpg'
 import FooterImg from '../Footer/FooterImg';
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../GoogleAnalytics/GoogleAnalytics';
 
 const TreeTrimming = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -92,7 +93,7 @@ const TreeTrimming = () => {
                 <meta name='description' content="Elevate your landscape with precision tree trimming services from Van Pelt's Tree & Lawn Care. Enhance tree health and aesthetic appeal today."></meta>
             </Helmet>
             <Navbar />
-
+            <GoogleAnalytics/>
             <div className='service-layout'>
                 <div className='service-layout-row'>
                     <div className='servicer-left first-wrapper

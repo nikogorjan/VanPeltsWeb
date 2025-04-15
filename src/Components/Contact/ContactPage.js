@@ -12,6 +12,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../GoogleAnalytics/GoogleAnalytics';
 
 function Contact() {
   const [sliderVisible, setSliderVisible] = useState(false);
@@ -92,6 +93,7 @@ function Contact() {
                 <meta name='description' content="Get in touch with Van Pelt's Tree & Lawn Care for top-notch tree and lawn services in Dayton, Ohio. We're here to transform your outdoor space!"></meta>
             </Helmet>
       <Navbar />
+      <GoogleAnalytics/>
 
       <div className='contact-page-main'>
         <LeafAnimation className='zindex'/>

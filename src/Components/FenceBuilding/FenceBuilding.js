@@ -4,6 +4,7 @@ import removal from '../../Resources/Images/fence1.png'
 import removal2 from '../../Resources/Images/fence3.png'
 import FooterImg from '../Footer/FooterImg';
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../GoogleAnalytics/GoogleAnalytics';
 
 const FenceBuilding = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -91,7 +92,7 @@ const FenceBuilding = () => {
                 <meta name='description' content="Elevate your privacy and security with our expert privacy fence building service. Van Pelt's Tree & Lawn Care delivers quality and peace of mind."></meta>
             </Helmet>
             <Navbar />
-
+            <GoogleAnalytics/>
             <div className='service-layout'>
                 <div className='service-layout-row'>
                     <div className='servicer-left first-wrapper
