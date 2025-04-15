@@ -1,26 +1,29 @@
-# Use the official Node.js image as the base image
-FROM node:16-alpine
+# 1. Build stage
+FROM node:18-alpine AS build
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
+# Copy package files and install
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
 
-# Install project dependencies
-RUN npm install --legacy-peer-deps
-
-# Copy the rest of the React app's source code into the container
+# Copy all files and build
 COPY . .
-
-# Build the React app for production
 RUN npm run build
 
-# Install a simple web server to serve the build files
-RUN npm install -g serve
+# 2. Production stage
+FROM nginx:alpine
 
-# Set the command to run the app when the container starts
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Remove default NGINX static assets
+RUN rm -rf /usr/share/nginx/html/*
 
-# Expose the port that your React app will run on
-EXPOSE 3000
+# Copy built React files from build stage
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start NGINX
+CMD ["nginx", "-g", "daemon off;"]
