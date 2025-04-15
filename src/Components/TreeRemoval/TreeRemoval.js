@@ -5,6 +5,7 @@ import removal from '../../Resources/Images/removal1.jpg'
 import removal2 from '../../Resources/Images/removal2.jpg'
 import FooterImg from '../Footer/FooterImg';
 import { Helmet } from 'react-helmet-async';
+import GoogleAnalytics from '../GoogleAnalytics/GoogleAnalytics';
 
 const TreeRemoval = () => {
     const [sliderVisible, setSliderVisible] = useState(false);
@@ -92,7 +93,7 @@ const TreeRemoval = () => {
                 <meta name='description' content="Experience professional tree removal by Van Pelt's Tree & Lawn Care. Safely and efficiently remove unwanted trees from your property."></meta>
             </Helmet>
             <Navbar />
-
+            <GoogleAnalytics/>
             <div className='service-layout'>
                 <div className='service-layout-row'>
                     <div className='servicer-left first-wrapper
