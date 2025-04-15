@@ -1,28 +1,32 @@
-# 1. Build stage
+# ===========================
+# 1) Build Stage
+# ===========================
 FROM node:18-alpine AS build
-
-# Set working directory
 WORKDIR /app
 
-# Copy package files and install
-COPY package.json ./
-COPY package-lock.json ./
+# Copy package manifest & install
+COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy all files and build
+# Copy source code & build
 COPY . .
 RUN npm run build
 
-# 2. Production stage
+# ===========================
+# 2) Production Stage
+# ===========================
 FROM nginx:alpine
 
-# Remove default NGINX static assets
+# Clear default NGINX files
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy built React files from build stage
+# Copy our custom NGINX config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy the React build output to NGINX
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Expose port 80
+# Expose port 80 in the container
 EXPOSE 80
 
 # Start NGINX
