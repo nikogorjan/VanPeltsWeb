@@ -158,7 +158,6 @@ function Contact() {
 
         <div className='contact-contact-form'>
           <h1 className='Contact-main-header2'>Let's get in touch</h1>
-          <ContactForm />
         </div>
 
         <div className='contact-services'>
